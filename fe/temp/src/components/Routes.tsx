@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import App from './App';
-import About from './About';
-import Dashboard from './Dashboard';
+import AccountSummary from './AccountSummary';
+import CreateAccount from './CreateAccount';
+import TransactionForm from './TransactionForm';
+import TransactionHistory from './TransactionHistory';
 
 export default function RootRoutes() {
   return (
@@ -12,10 +14,16 @@ export default function RootRoutes() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/createAccount">Create Account</Link>
           </li>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/accountSummary">Account Summary</Link>
+          </li>
+          <li>
+            <Link to="/createTransaction">Transaction Form</Link>
+          </li>
+          <li>
+            <Link to="/transactionHistory">Transaction History</Link>
           </li>
         </ul>
 
@@ -30,8 +38,10 @@ export default function RootRoutes() {
         */}
         <Routes>
           <Route path="/" element={<App />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/createAccount" element={<CreateAccount />}></Route>
+          <Route path="/accountSummary" element={<AccountSummary />}></Route>
+          <Route path="/createTransaction" element={<TransactionForm />}></Route>
+          <Route path="/transactionHistory" element={<TransactionHistory />}></Route>
         </Routes>
       </div>
     </Router>
